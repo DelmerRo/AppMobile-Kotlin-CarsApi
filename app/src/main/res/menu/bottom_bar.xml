@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+
+        android:title="@string/home" />
+    <item
+        android:id="@+id/list"
+
+        android:title="@string/cars" />
+    <item
+        android:id="@+id/search"
+
+        android:title="@string/search" />
+    <item
+        android:id="@+id/profile"
+
+        android:title="@string/profile" />
+
+</menu>

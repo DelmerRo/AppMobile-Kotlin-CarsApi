@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/grp1" >
+        <item
+            android:id="@+id/subtitle"
+            android:title="">
+            <menu>
+                <item
+                    android:id="@+id/inicio"
+                    android:title="Perfil"
+                    />
+                <item
+                    android:id="@+id/pokemon"
+                    android:title="Configuración"
+                    />
+                <item
+                    android:id="@+id/superheros"
+                    android:title="Favoritos"
+                    />
+            </menu>
+        </item>
+    </group>
+
+
+</menu>
