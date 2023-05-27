@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.Home"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/setting"
+        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.Setting"
+        android:label="Configuración"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.Profile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/list"
+        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.List"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/search"
+        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.Search"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+</navigation>
