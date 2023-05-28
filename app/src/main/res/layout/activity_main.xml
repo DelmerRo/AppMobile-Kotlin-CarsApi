@@ -6,81 +6,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    app:layout_constraintStart_toStartOf="parent"
     tools:context="ar.edu.ort.tp3.appmobile_kotlin_carsapi.activities.MainActivity">
-    <com.google.android.material.appbar.AppBarLayout
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title=""
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:title=""
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <!-- Agrega el ImageView para el logo -->
+        <ImageView
+            android:id="@+id/ivLogoPremier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/premier"
+            android:scaleType="centerInside"
+            android:layout_gravity="center" />
+        <ImageView
+            android:id="@+id/ivLogoCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/car_logo_flot"
+            android:scaleType="centerInside"
+            android:layout_gravity="end" />
+        <ImageView
+            android:id="@+id/ivHamburger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/hamburger"
+            android:scaleType="centerInside"
+            android:layout_gravity="start" />
 
-            <!-- Agrega el ImageView para el logo -->
-            <ImageView
-                android:id="@+id/ivLogoPremier"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/premier"
-                android:scaleType="centerInside"
-                android:layout_gravity="center" />
-            <ImageView
-                android:id="@+id/ivLogoCar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/car_logo_flot"
-                android:scaleType="centerInside"
-                android:layout_gravity="end" />
-            <ImageView
-                android:id="@+id/ivHamburger"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/hamburger"
-                android:scaleType="centerInside"
-                android:layout_gravity="start"
-                />
-            
-        </androidx.appcompat.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
-    </com.google.android.material.appbar.AppBarLayout>
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="@color/BackgroundFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:layout_height="0dp"
+        app:cardCornerRadius="30sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
             app:defaultNavHost="true"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:navGraph="@navigation/main_nav_botttom" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:itemBackground="@color/white"
-            app:itemHorizontalTranslationEnabled="true"
-            app:itemIconTint="@color/bottom_nav_icon_color_selector"
-            app:itemTextColor="@color/bottom_nav_icon_color_selector"
-            app:labelVisibilityMode="labeled"
-            app:menu="@menu/bottom_bar" />
+    </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/white"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconTint="@color/bottom_nav_icon_color_selector"
+        app:itemTextColor="@color/bottom_nav_icon_color_selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Agrega el ImageView para la imagen flotante -->
 </androidx.constraintlayout.widget.ConstraintLayout>
