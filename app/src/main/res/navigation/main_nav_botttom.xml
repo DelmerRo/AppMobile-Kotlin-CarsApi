@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_botttom"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/cars"
+        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.CarsFragment"
+        android:label="Autos"
+        tools:layout="@layout/fragment_cars" >
+        <action
+            android:id="@+id/action_carsFragment_to_homeFragment"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/home"
+        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.ProfileFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.SearchFragment"
+        android:label="Buscar"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search_to_home"
+            app:destination="@id/home" />
+    </fragment>
+</navigation>

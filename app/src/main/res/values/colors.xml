@@ -3,4 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#808080</color>
+    <color name="blue">#1565C0</color>
+    <color name="tv_sky_blue">#06B2F6</color>
+    <color name="btn_sky_blue">#40C4FF</color>
+    <color name="verde_limon">#449C04</color>
+    <color name="hamburger">#191919</color>
+    <color name="selectedItemBottomBar">#017BFF</color>
+    <color name="BackgroundFragment">#F5F5F5</color>
+
 </resources>

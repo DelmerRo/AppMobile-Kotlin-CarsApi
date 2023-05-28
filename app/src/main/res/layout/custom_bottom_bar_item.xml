@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:src="@drawable/premier"/>
+    
+    <ImageView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/car_logo_flot"
+        android:layout_marginStart="80dp"/>
+
+</LinearLayout>
