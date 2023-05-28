@@ -9,15 +9,18 @@
             android:title="">
             <menu>
                 <item
-                    android:id="@+id/inicio"
+                    android:id="@+id/profile"
+                    android:icon="@drawable/basicmenuprofile"
                     android:title="Perfil"
                     />
                 <item
-                    android:id="@+id/pokemon"
+                    android:id="@+id/setting"
+                    android:icon="@drawable/basicmenusetting"
                     android:title="Configuración"
                     />
                 <item
                     android:id="@+id/superheros"
+                    android:icon="@drawable/basicmenustroke"
                     android:title="Favoritos"
                     />
             </menu>
