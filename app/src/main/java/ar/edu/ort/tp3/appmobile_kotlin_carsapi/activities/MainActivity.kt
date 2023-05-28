@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity() {
         navigationView = findViewById(R.id.nav_view)
         navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-        tvNavHeaderMain = navigationView.getHeaderView(0).findViewById(R.id.tvNavHeaderMain)
-        updateNameUser(tvNavHeaderMain)
+        //tvNavHeaderMain = navigationView.getHeaderView(0).findViewById(R.id.tvNavHeaderMain)
+       // updateNameUser(tvNavHeaderMain)
     }
 
     private fun updateNameUser(tvNavHeaderMain: TextView) {
