@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/cars">
+    app:startDestination="@id/home">
     <fragment
         android:id="@+id/cars"
         android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.CarsFragment"
