@@ -19,8 +19,8 @@
                     android:title="Configuración"
                     />
                 <item
-                    android:id="@+id/superheros"
-                    android:icon="@drawable/basicmenustroke"
+                    android:id="@+id/favorite"
+                    android:icon="@drawable/basicmenufavorito"
                     android:title="Favoritos"
                     />
             </menu>
