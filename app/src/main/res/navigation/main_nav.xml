@@ -3,24 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/home">
-    <fragment
-        android:id="@+id/cars"
-        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.CarsFragment"
-        android:label="Autos"
-        tools:layout="@layout/fragment_cars" />
-    <fragment
-        android:id="@+id/home"
-        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.HomeFragment"
-        android:label="Inicio"
-        tools:layout="@layout/fragment_home" />
+    app:startDestination="@id/profile">
     <fragment
         android:id="@+id/profile"
         android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.ProfileFragment"
         android:label="Perfil"
         tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/setting"
+        android:id="@+id/favoritos"
+        android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.FavoritosFragment"
+        android:label="Favoritos"
+        tools:layout="@layout/fragment_favoritos" />
+
+    <fragment
+        android:id="@+id/setting1"
         android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.SettingFragment"
         android:label="Configuración"
         tools:layout="@layout/fragment_setting" />
