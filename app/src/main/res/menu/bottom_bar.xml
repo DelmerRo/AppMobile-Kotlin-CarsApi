@@ -19,5 +19,4 @@
         android:id="@+id/profile"
         android:icon="@drawable/basicmenuprofile"
         android:title="@string/profile" />
-
 </menu>
