@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/parking_lot" />
+            app:srcCompat="@drawable/fondo" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -72,11 +72,13 @@
             android:background="@drawable/tv_round_white"
             android:ems="10"
             android:fontFamily="sans-serif"
-            android:hint="example@email.com"
+            android:textSize="25dp"
+            android:hint="Name"
             android:inputType="textEmailAddress"
             android:maxLines="8"
             android:radius="100dp"
             android:required="true"
+            android:gravity="center"
 
             android:textColorHint="@color/black" />
 
@@ -104,10 +106,12 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/tv_round_white"
+            android:textSize="25dp"
             android:ems="10"
             android:hint="***********"
             android:inputType="textPassword"
             android:fontFamily="sans-serif"
+            android:gravity="center"
             android:maxLines="6"
             android:required="true"
             android:textColorHint="@color/black" />
@@ -124,7 +128,7 @@
             android:gravity="center"
             android:text="Olvidaste tu contraseña"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/remember"
+            android:textColor="@color/black"
             android:textSize="15dp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
