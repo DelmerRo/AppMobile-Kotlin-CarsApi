@@ -24,25 +24,17 @@ class ProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val vista = inflater.inflate(R.layout.fragment_profile, container, false)
-        initListeners(vista)
         return vista;
     }
 
 
     private fun initListeners(vista: View) {
-        buttonBack = vista.findViewById(R.id.ivHamburger)
+        buttonBack = vista.findViewById(R.id.btnToolbarHamburger)
         buttonBack.setOnClickListener {
            // val action = ProfileFragment.
             //findNavController().navigate(action)
         }
     }
 
-    override  fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        buttonBack = view.findViewById(R.id.ivHamburger)
-
-
-
-    }
 
 }

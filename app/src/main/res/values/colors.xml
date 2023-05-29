@@ -10,6 +10,7 @@
     <color name="btn_brand_black">#212121</color>
     <color name="hamburger">#191919</color>
     <color name="remember"> #800000</color>
+    <color name="background_toolbar">#FDFCFC</color>
 
     <color name="selectedItemBottomBar">#017BFF</color>
     <color name="BackgroundFragment">#F5F5F5</color>

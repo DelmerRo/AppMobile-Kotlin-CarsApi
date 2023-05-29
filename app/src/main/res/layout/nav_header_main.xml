@@ -42,6 +42,7 @@
         android:layout_height="wrap_content"
         android:text="@string/userName"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:paddingTop="30dp"
         android:textSize="30dp"
         android:layout_marginStart="15dp"
