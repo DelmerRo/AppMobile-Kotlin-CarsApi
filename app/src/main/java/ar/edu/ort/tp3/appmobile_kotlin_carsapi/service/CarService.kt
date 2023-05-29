@@ -1,5 +1,6 @@
 package ar.edu.ort.tp3.appmobile_kotlin_carsapi.service
 
+import android.widget.EditText
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.models.Car
 import retrofit2.Response
 import retrofit2.http.GET
@@ -10,7 +11,7 @@ interface CarService {
     @GET("v1/cars")
     suspend fun getCars(
         @Header("X-Api-Key") apiKey: String,
-        @Query("model") model: String
+        @Query("make") model: String
     ): Response<List<Car>>
 }
 

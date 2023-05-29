@@ -26,6 +26,7 @@ class CarAdapter (private val carList: List<Car>) : RecyclerView.Adapter<CarView
         holder.setMakeModel(car.make,car.model)
         holder .setTransmission(car.transmission)
         holder .setYear(car.year)
+        holder.setClase(car.`class`)
     }
 
     override fun getItemCount(): Int {
