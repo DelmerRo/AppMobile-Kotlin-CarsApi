@@ -2,26 +2,23 @@ package ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments
 
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.R
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.adapters.CarAdapter
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.models.Car
-import ar.edu.ort.tp3.appmobile_kotlin_carsapi.models.CarPaginateResponse
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.service.CarServiceApiBuilder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class CarsFragment : Fragment() {
     private lateinit var carAdapter: CarAdapter
@@ -34,7 +31,6 @@ class CarsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_cars, container, false)
-        etCarsSearch = view.findViewById(R.id.etCarsSearch)
         return view
     }
 
@@ -44,19 +40,32 @@ class CarsFragment : Fragment() {
         recyclerViewCars.layoutManager = LinearLayoutManager(requireContext())
         carAdapter = CarAdapter(emptyList())
         recyclerViewCars.adapter = carAdapter
-        CoroutineScope(Dispatchers.Main).launch {
-            loadCars()
+        etCarsSearch = view.findViewById(R.id.etCarsSearch)
+
+        etCarsSearch.setOnKeyListener { _, keyCode, event ->
+           // Log.e(EditorInfo.IME_ACTION_SEARCH.toString(),actionId.toString())
+            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN) {
+                val searchText = etCarsSearch.text.toString().trim()
+                CoroutineScope(Dispatchers.Main).launch {
+                    loadCars(searchText)
+                }
+                true
+            } else {
+                false
+            }
         }
 
     }
 
-    private suspend fun loadCars() {
+
+
+
+    private suspend fun loadCars(searchText: String) {
         val service = CarServiceApiBuilder.getCarService()
         val carList = mutableListOf<Car>()
         try {
-            val response = service.getCars("VyFRiZ7J1W4Vbzuk89yLRA==qWOIgbFZ7H6YB8lI", "camry")
+            val response = service.getCars("VyFRiZ7J1W4Vbzuk89yLRA==qWOIgbFZ7H6YB8lI", searchText)
             if (response.isSuccessful) {
-                Log.e("dff", response.body().toString())
                 val cars = response.body()
                 cars?.let {
                     carList.addAll(cars)
@@ -65,15 +74,14 @@ class CarsFragment : Fragment() {
                     showData(carList)
                 }
             } else {
-                // Manejar respuesta no exitosa aquí si es necesario
+                Log.e("response.isSuccessful", "No se encontró respuesta en la respuesta!")
             }
         } catch (e: Exception) {
-            Log.e("CAtch", e.toString())
-            // Manejar excepción aquí si es necesario
+            Log.e("Catch", e.toString())
         }
     }
+
     private fun showData(carList: List<Car>) {
-        Log.e("showData",carList.toString())
         carAdapter = CarAdapter(carList)
         recyclerViewCars.adapter = carAdapter
     }

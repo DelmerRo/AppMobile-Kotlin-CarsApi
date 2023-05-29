@@ -5,21 +5,24 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.R
 
-class CarViewHolder(v: View): RecyclerView.ViewHolder(v) {
+class CarViewHolder(v: View) : RecyclerView.ViewHolder(v) {
     private var view: View
 
     init {
         this.view = v
     }
-    fun setMakeModel(make: String,model: String){
+
+    fun setMakeModel(make: String, model: String) {
         val txt = this.view.findViewById<TextView>(R.id.tvHolderRCCarMakeAndModel)
         txt.text = "$make $model"
     }
 
     fun setTransmission(transmission: String) {
         val txt = this.view.findViewById<TextView>(R.id.tvHolderRCCarTransmission)
-
-        txt.text = if (transmission == "a") "Automático" else "Manual"
+        if (transmission == "a") {
+            txt.text = "Automático"
+        } else
+            txt.text = "Manual"
     }
 
     fun setFuelType(fuelType: String) {
