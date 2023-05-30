@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:id="@+id/grp1" >
+
         <item
+            android:checkableBehavior="none"
             android:id="@+id/subtitle"
-            android:title="">
+            android:title="_____________________________________">
             <menu>
                 <item
                     android:id="@+id/profile"
@@ -25,7 +26,6 @@
                     />
             </menu>
         </item>
-    </group>
 
 
 </menu>

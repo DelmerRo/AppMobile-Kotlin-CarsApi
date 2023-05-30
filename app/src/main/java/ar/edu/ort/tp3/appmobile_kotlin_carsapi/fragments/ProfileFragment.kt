@@ -11,7 +11,6 @@ import ar.edu.ort.tp3.appmobile_kotlin_carsapi.R
 
 
 class ProfileFragment : Fragment() {
-    private lateinit var buttonBack: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -26,15 +25,4 @@ class ProfileFragment : Fragment() {
         val vista = inflater.inflate(R.layout.fragment_profile, container, false)
         return vista;
     }
-
-
-    private fun initListeners(vista: View) {
-        buttonBack = vista.findViewById(R.id.btnToolbarHamburger)
-        buttonBack.setOnClickListener {
-           // val action = ProfileFragment.
-            //findNavController().navigate(action)
-        }
-    }
-
-
 }
