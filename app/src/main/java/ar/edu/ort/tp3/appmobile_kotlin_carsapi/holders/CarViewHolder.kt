@@ -1,9 +1,12 @@
 package ar.edu.ort.tp3.appmobile_kotlin_carsapi.holders
 
+import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.R
+import com.squareup.picasso.Picasso
 
 class CarViewHolder(v: View) : RecyclerView.ViewHolder(v) {
     private var view: View
@@ -12,11 +15,10 @@ class CarViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         this.view = v
     }
 
-    fun setMakeModel(make: String, model: String) {
+    fun setMake(make: String) {
         val txt = this.view.findViewById<TextView>(R.id.tvHolderRCCarMakeAndModel)
-        txt.text = "$make $model"
+        txt.text = make
     }
-
     fun setTransmission(transmission: String) {
         val txt = this.view.findViewById<TextView>(R.id.tvHolderRCCarTransmission)
         if (transmission == "a") {
@@ -37,7 +39,25 @@ class CarViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 
     fun setClase(clase: String) {
         val txt = this.view.findViewById<TextView>(R.id.tvHolderRCCarClass)
-        txt.text = clase
+        val limitedClase = if (clase.length <= 10) clase else clase.substring(0, 10)
+        txt.text = limitedClase
+    }
+
+    fun setImage(make: String) {
+        val imageView = view?.findViewById<ImageView>(R.id.ivHolderRCCarMakeAndModelLogo)
+        if (make == "toyota") {
+            imageView?.setImageResource(R.drawable.logo_toyota)
+        }else if(make == "bmw"){
+            imageView?.setImageResource(R.drawable.logo_bmw)
+        }else if(make == "maserati"){
+            imageView?.setImageResource(R.drawable.logo_maserati)
+        } else if(make == "mercedes-benz"){
+            imageView?.setImageResource(R.drawable.logo_mercedes)
+        }else if(make == "porsche"){
+            imageView?.setImageResource(R.drawable.logo_porsch)
+        }else{
+            imageView?.setImageResource(R.drawable.car_logo_flot)
+        }
     }
 }
 /*

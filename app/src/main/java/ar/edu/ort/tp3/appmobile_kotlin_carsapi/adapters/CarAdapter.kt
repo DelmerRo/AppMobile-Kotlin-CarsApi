@@ -15,18 +15,12 @@ class CarAdapter (private val carList: List<Car>) : RecyclerView.Adapter<CarView
 
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
         val car = carList[position]
-        //holder .setCityMpg(car.city_mpg)
-       // holder .setCarClass(car.`class`)
-       // holder .setCombinationMpg(car.combination_mpg)
-       // holder  .setCylinders(car.cylinders)
-       // holder .setDisplacement(car.displacement)
-       // holder .setDrive(car.drive)
         holder .setFuelType(car.fuel_type)
-     //   holder .setHighwayMpg(car.highway_mpg)
-        holder.setMakeModel(car.make,car.model)
+        holder.setMake(car.make)
         holder .setTransmission(car.transmission)
         holder .setYear(car.year)
         holder.setClase(car.`class`)
+        holder.setImage(car.make)
     }
 
     override fun getItemCount(): Int {
