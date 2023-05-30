@@ -2,11 +2,7 @@ package ar.edu.ort.tp3.appmobile_kotlin_carsapi.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.ImageView
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.R
