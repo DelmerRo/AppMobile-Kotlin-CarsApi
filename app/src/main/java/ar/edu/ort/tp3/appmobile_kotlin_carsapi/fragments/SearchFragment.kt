@@ -1,5 +1,4 @@
 package ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments
-
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -7,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.R
@@ -20,11 +19,14 @@ class SearchFragment : Fragment() {
 
     private lateinit var carAdapter: CarAdapter
     private lateinit var recyclerViewCars: RecyclerView
-    private lateinit var etCarsSearch: EditText
-    private val searchViewModel: SearchViewModel by activityViewModels()
+    private lateinit var etSearchSearch: EditText
+    private val searchViewModel: SearchViewModel by lazy {
+        ViewModelProvider(requireActivity())[SearchViewModel::class.java]
+    }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_search, container, false)
@@ -34,7 +36,6 @@ class SearchFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initComponents(view)
         initListeners()
-
     }
 
     private fun initComponents(view: View) {
@@ -42,13 +43,13 @@ class SearchFragment : Fragment() {
         recyclerViewCars.layoutManager = LinearLayoutManager(requireContext())
         carAdapter = CarAdapter(emptyList())
         recyclerViewCars.adapter = carAdapter
-        etCarsSearch = view.findViewById(R.id.etCarsSearch)
+        etSearchSearch = view.findViewById(R.id.etSearchSearch)
     }
 
     private fun initListeners() {
-        etCarsSearch.setOnKeyListener { _, keyCode, event ->
+        etSearchSearch.setOnKeyListener { _, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN) {
-                val searchText = etCarsSearch.text.toString().trim()
+                val searchText = etSearchSearch.text.toString().trim()
                 searchViewModel.searchCars(searchText)
                 true
             } else {
@@ -65,4 +66,8 @@ class SearchFragment : Fragment() {
         recyclerViewCars.adapter = carAdapter
     }
 }
+
+
+
+
 

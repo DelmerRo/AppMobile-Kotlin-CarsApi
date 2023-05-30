@@ -9,10 +9,15 @@ import retrofit2.http.Query
 
 interface CarService {
     @GET("v1/cars")
-    suspend fun getCars(
-        @Header("X-Api-Key") apiKey: String,
-        @Query("make") model: String
-    ): Response<List<Car>>
-}
+    suspend fun getCarsForMake(@Header("X-Api-Key") apiKey: String, @Query("make") model: String): Response<List<Car>>
 
+    @GET("v1/cars")
+    suspend fun getCarsForYear(@Header("X-Api-Key") apiKey: String, @Query("year") model: String): Response<List<Car>>
+
+    @GET("v1/cars")
+    suspend fun getCarsForTransmission(@Header("X-Api-Key") apiKey: String, @Query("model") model: String): Response<List<Car>>
+
+    @GET("v1/cars")
+    suspend fun getCarsForFuelType(@Header("X-Api-Key") apiKey: String, @Query("fuel_type") model: String): Response<List<Car>>
+}
 

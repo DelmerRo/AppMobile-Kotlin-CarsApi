@@ -16,7 +16,8 @@
         android:background="@drawable/edittext_rounded"
         android:drawableLeft="@drawable/search"
         android:gravity="center"
-        android:hint="Buscador de vehículos"
+        android:textSize="10dp"
+        android:hint="Buscar por Marca, Modelo, Año, Combustible Ejemplo: Toyota"
         android:paddingLeft="47dp" /> <!-- Ajusta el valor según tus necesidades -->
 
     <androidx.recyclerview.widget.RecyclerView

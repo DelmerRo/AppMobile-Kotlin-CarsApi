@@ -30,12 +30,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/ivCarLogo"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:id="@+id/ivHolderRCCarMakeAndModelLogo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_gravity="center"
             android:layout_marginTop="20sp"
-            android:background="@drawable/logo_bmw"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
