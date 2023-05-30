@@ -31,6 +31,7 @@ class MyAccountActivity : AppCompatActivity() {
         setContentView(R.layout.activity_my_account)
         //supportActionBar?.hide()
         initComponents()
+        updateNameUser()
         initListeners()
     }
 
@@ -45,15 +46,12 @@ class MyAccountActivity : AppCompatActivity() {
         navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
         tvNavHeaderMain = navigationView.getHeaderView(0).findViewById(R.id.tvNavHeaderMain)
         ivPhoto = navigationView.getHeaderView(0).findViewById(R.id.ivNavHeaderPhoto)
-        updateNameUser(tvNavHeaderMain)
     }
 
-    private fun updateNameUser(tvNavHeaderMain: TextView) {
+    private fun updateNameUser() {
         val userOnline = UserManager.user
         if (userOnline != null) {
             tvNavHeaderMain.text = userOnline.getNamLastNam()
-            // Carga de la imagen utilizando Picasso
-            Log.e(userOnline.getUrlImage(),ivPhoto.toString() +"ivPhoto")
             Picasso.get().load(userOnline.getUrlImage()).into(ivPhoto)
         }
     }
