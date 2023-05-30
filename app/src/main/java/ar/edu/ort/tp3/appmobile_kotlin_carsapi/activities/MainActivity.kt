@@ -1,5 +1,6 @@
 package ar.edu.ort.tp3.appmobile_kotlin_carsapi.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,7 +19,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.hide()
         setContentView(R.layout.activity_main)
         initComponents()
         val navController = navHostFragment.navController
@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initComponents() {
+        supportActionBar?.hide()
         navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         bottomNavView = findViewById(R.id.bottom_bar)
@@ -47,6 +48,10 @@ class MainActivity : AppCompatActivity() {
             } else {
                 btnToolbarHamburger.setBackgroundResource(R.drawable.back)
             }
+        }
+        btnToolbarHamburger.setOnClickListener {
+            val intent = Intent(this, MyAccountActivity::class.java)
+            startActivity(intent)
         }
     }
 }
