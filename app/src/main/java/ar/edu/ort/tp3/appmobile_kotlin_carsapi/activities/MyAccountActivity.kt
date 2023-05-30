@@ -33,6 +33,7 @@ class MyAccountActivity : AppCompatActivity() {
         navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
         tvNavHeaderMain = navigationView.getHeaderView(0).findViewById(R.id.tvNavHeaderMain)
         updateNameUser(tvNavHeaderMain)
+
     }
 
     private fun updateNameUser(tvNavHeaderMain: TextView) {

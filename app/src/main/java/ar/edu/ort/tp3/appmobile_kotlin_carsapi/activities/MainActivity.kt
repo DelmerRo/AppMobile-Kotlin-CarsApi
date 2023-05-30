@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavView = findViewById(R.id.bottom_bar)
         btnToolbarHamburger = findViewById(R.id.btnToolbarHamburger)
 
+
         val navController = navHostFragment.navController
         NavigationUI.setupWithNavController(bottomNavView, navController)
 
