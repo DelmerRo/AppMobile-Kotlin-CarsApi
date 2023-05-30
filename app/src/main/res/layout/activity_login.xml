@@ -3,157 +3,93 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    >
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayoutCompat"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:orientation="vertical"
-        tools:context=".activities.LoginActivity"
-        tools:layout_editor_absoluteY="-86dp">
-
-        <ImageView
-            android:id="@+id/backgroundImageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/fondo" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/liner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat"
-        app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat"
-        tools:context=".activities.LoginActivity">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".activities.LoginActivity"
+        android:layout_marginBottom="90dp">
 
 
         <ImageView
             android:id="@+id/imgLogoPremi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="320dp"
+            android:layout_marginBottom="110dp"
+            android:layout_height="35dp"
             android:layout_gravity="center"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            app:srcCompat="@drawable/premier" />
+            app:srcCompat="@drawable/premier_car"
+            />
 
-        <TextView
-            android:id="@+id/tvLoginUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@color/white"
-            android:text="@string/tvUserName"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
             android:background="@drawable/tv_round_white"
-            android:ems="10"
             android:fontFamily="sans-serif"
-            android:textSize="25dp"
+            android:gravity="center"
             android:hint="Name"
             android:inputType="textEmailAddress"
             android:maxLines="8"
             android:radius="100dp"
             android:required="true"
-            android:gravity="center"
-
-            android:textColorHint="@color/black" />
-
-        <TextView
-            android:id="@+id/tvLoginPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="@string/tvPassword"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+            android:textColorHint="@color/gray"
+            android:textSize="15dp" />
 
 
         <EditText
+            android:layout_marginTop="30dp"
             android:id="@+id/editTextTextPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="350dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
             android:background="@drawable/tv_round_white"
-            android:textSize="25dp"
-            android:ems="10"
-            android:hint="***********"
-            android:inputType="textPassword"
             android:fontFamily="sans-serif"
             android:gravity="center"
+            android:hint="***********"
+            android:inputType="textPassword"
             android:maxLines="6"
             android:required="true"
-            android:textColorHint="@color/black" />
+            android:textColorHint="@color/gray"
+            android:textSize="15dp" />
 
         <TextView
+            android:layout_marginTop="5dp"
             android:id="@+id/tvRemember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:text="Olvidaste tu contraseña"
+            android:text="Olvide tu contraseña"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="15dp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+          android:layout_marginBottom="60dp"
+            />
 
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"
-            
             android:background="@drawable/button_rounded"
-            android:text="INGRESAR" />
+            android:fontFamily="sans-serif"
+            android:text="INGRESAR"
+            android:textStyle="bold" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
