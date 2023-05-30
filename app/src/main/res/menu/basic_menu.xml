@@ -14,12 +14,12 @@
                     android:title="Perfil"
                     />
                 <item
-                    android:id="@+id/setting"
+                    android:id="@+id/setting1"
                     android:icon="@drawable/basicmenusetting"
                     android:title="Configuración"
                     />
                 <item
-                    android:id="@+id/favorite"
+                    android:id="@+id/favoritos"
                     android:icon="@drawable/basicmenufavorito"
                     android:title="Favoritos"
                     />

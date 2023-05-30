@@ -17,7 +17,8 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/background_toolbar">
 
         <!-- Agrega el ImageView para el logo -->
         <ImageView
@@ -35,14 +36,15 @@
             android:src="@drawable/car_logo_flot"
             android:scaleType="centerInside"
             android:layout_gravity="end" />
-        <ImageView
-            android:id="@+id/ivHamburger"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/btnToolbarHamburger"
+            android:background="@drawable/hamburger"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/hamburger"
             android:scaleType="centerInside"
             android:layout_gravity="start" />
+
 
     </androidx.appcompat.widget.Toolbar>
 
