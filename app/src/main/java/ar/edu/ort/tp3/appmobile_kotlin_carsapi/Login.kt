@@ -45,7 +45,7 @@ class Login : AppCompatActivity() {
             }
         }
     }
-
+//algo
     private fun getSearchedUser(email: String, password: String): UserData? {
         var i = 0
         var user: UserData? = null
