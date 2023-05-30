@@ -2,7 +2,9 @@ package ar.edu.ort.tp3.appmobile_kotlin_carsapi.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.NavHostFragment
@@ -12,7 +14,7 @@ import ar.edu.ort.tp3.appmobile_kotlin_carsapi.R
 import com.google.android.material.navigation.NavigationView
 
 class MyAccountActivity : AppCompatActivity() {
-
+    private lateinit var hamburgerButton: Button
     private lateinit var navHostFragment: NavHostFragment
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
@@ -22,8 +24,11 @@ class MyAccountActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_account)
         initComponents()
-        setupDrawerLayout()
+        initListeners()
+    }
 
+    private fun initListeners() {
+        setupDrawerLayout()
     }
 
     private fun initComponents() {
@@ -33,7 +38,7 @@ class MyAccountActivity : AppCompatActivity() {
         navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
         tvNavHeaderMain = navigationView.getHeaderView(0).findViewById(R.id.tvNavHeaderMain)
         updateNameUser(tvNavHeaderMain)
-
+        hamburgerButton.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.black));
     }
 
     private fun updateNameUser(tvNavHeaderMain: TextView) {
