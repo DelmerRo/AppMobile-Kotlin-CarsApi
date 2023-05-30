@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -30,11 +29,10 @@ class CarsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_cars, container, false)
-        return view
+        return inflater.inflate(R.layout.fragment_cars, container, false)
     }
 
-    override  fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recyclerViewCars = view.findViewById(R.id.rvCars)
         recyclerViewCars.layoutManager = LinearLayoutManager(requireContext())
@@ -43,7 +41,7 @@ class CarsFragment : Fragment() {
         etCarsSearch = view.findViewById(R.id.etCarsSearch)
 
         etCarsSearch.setOnKeyListener { _, keyCode, event ->
-           // Log.e(EditorInfo.IME_ACTION_SEARCH.toString(),actionId.toString())
+            // Log.e(EditorInfo.IME_ACTION_SEARCH.toString(),actionId.toString())
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN) {
                 val searchText = etCarsSearch.text.toString().trim()
                 CoroutineScope(Dispatchers.Main).launch {
@@ -56,8 +54,6 @@ class CarsFragment : Fragment() {
         }
 
     }
-
-
 
 
     private suspend fun loadCars(searchText: String) {

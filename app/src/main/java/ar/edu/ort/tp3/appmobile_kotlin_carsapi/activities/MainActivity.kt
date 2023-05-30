@@ -4,12 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.R
+import ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.ProfileFragment
+import ar.edu.ort.tp3.appmobile_kotlin_carsapi.service.UserManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.squareup.picasso.Picasso
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,20 +33,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun initComponents() {
         supportActionBar?.hide()
-        navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         bottomNavView = findViewById(R.id.bottom_bar)
         btnToolbarHamburger = findViewById(R.id.btnToolbarHamburger)
-        btnToolbarHamburger.setBackgroundTintList(
-            ContextCompat.getColorStateList(
-                this,
-                R.color.black
-            )
-        )
+        btnToolbarHamburger.backgroundTintList = ContextCompat.getColorStateList(this, R.color.black)
     }
 
     private fun initListeners(navController: NavController) {
-        // Agregar un OnDestinationChangedListener al NavController
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.home) {
                 btnToolbarHamburger.setBackgroundResource(R.drawable.hamburger)

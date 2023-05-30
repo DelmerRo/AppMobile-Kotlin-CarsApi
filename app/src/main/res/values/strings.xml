@@ -12,5 +12,6 @@
     <string name="cars">Autos</string>
     <string name="search">Buscar</string>
     <string name="profile">Perfil</string>
+    <string name="contentDescription">Foto de perfil</string>
 
 </resources>
