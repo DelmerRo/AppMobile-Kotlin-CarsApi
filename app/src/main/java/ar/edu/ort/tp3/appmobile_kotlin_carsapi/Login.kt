@@ -12,7 +12,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.R
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.activities.MainActivity
-import ar.edu.ort.tp3.appmobile_kotlin_carsapi.activities.data.UserData
+import ar.edu.ort.tp3.appmobile_kotlin_carsapi.data.UserData
 
 
 class Login : AppCompatActivity() {
