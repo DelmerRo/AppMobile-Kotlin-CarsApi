@@ -9,6 +9,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.R
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.activities.MainActivity
 import ar.edu.ort.tp3.appmobile_kotlin_carsapi.activities.data.UserData
@@ -64,5 +65,6 @@ class Login : AppCompatActivity() {
         etUserName = findViewById(R.id.editTextTextEmailAddress)
         etPassword = findViewById(R.id.editTextTextPassword)
         btnLogin = findViewById(R.id.btnLogin)
+        btnLogin.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.black));
     }
 }
