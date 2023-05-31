@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <!-- CardView con imagen y nombre -->
     <androidx.cardview.widget.CardView
         android:layout_width="120dp"
         android:layout_height="120dp"
@@ -17,8 +16,7 @@
             android:id="@+id/ivProfilePhoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/card_rounded_search"
-             />
+            android:background="@drawable/avatar" />
 
     </androidx.cardview.widget.CardView>
 
@@ -26,68 +24,67 @@
         android:id="@+id/tvProfileUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="32sp"
         android:layout_gravity="center"
-         />
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
-    <!-- CardView con notificaciones -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:cardCornerRadius="8dp">
-<androidx.appcompat.widget.LinearLayoutCompat
-    android:layout_width="match_parent"
-    android:layout_marginTop="10dp"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-  >
-        <LinearLayout
+
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="16dp">
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_marginTop="10dp"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/campana" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Notificaciones"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:textColor="#0091EA"
-                android:textSize="14sp" />
+                android:orientation="vertical"
+                android:padding="16dp">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/campana" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="left"
-            android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Notificaciones"
+                    android:textColor="#0091EA"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/notifications" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Notificaciones"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp" />
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
-        </LinearLayout>
-</androidx.appcompat.widget.LinearLayoutCompat>
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/notifications" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Notificaciones"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
 
 

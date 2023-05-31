@@ -53,11 +53,35 @@ class CarViewHolder(v: View) : RecyclerView.ViewHolder(v) {
             imageView?.setImageResource(R.drawable.logo_maserati)
         } else if(make == "mercedes-benz"){
             imageView?.setImageResource(R.drawable.logo_mercedes)
-        }else if(make == "porsche"){
+        }else if(make == "porsche") {
             imageView?.setImageResource(R.drawable.logo_porsch)
-        }else{
+        }else if(make == "alfa romeo"){
+                imageView?.setImageResource(R.drawable.logo_alfa_romeo)
+        }else if(make == "ferrari"){
+            imageView?.setImageResource(R.drawable.logo_ferrari)
+        }else if(make == "dodge"){
+            imageView?.setImageResource(R.drawable.logo_dodge)
+        }else if(make == "subaru"){
+            imageView?.setImageResource(R.drawable.logo_subaru)
+        }else if(make == "acura"){
+            imageView?.setImageResource(R.drawable.logo_acura)
+        }else if(make == "honda"){
+            imageView?.setImageResource(R.drawable.logo_honda)
+        }else if(make == "chevrolet"){
+            imageView?.setImageResource(R.drawable.logo_chevrolet)
+        }else if(make == "aston martin"){
+            imageView?.setImageResource(R.drawable.logo_aston_martin)
+        }
+        else if(make == "audi"){
+            imageView?.setImageResource(R.drawable.logo_audi)
+        }
+
+
+
+        else{
             imageView?.setImageResource(R.drawable.car_logo_flot)
         }
+
     }
 }
 /*
