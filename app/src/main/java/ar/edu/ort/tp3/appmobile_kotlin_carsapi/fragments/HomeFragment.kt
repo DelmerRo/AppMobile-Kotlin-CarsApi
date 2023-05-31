@@ -28,7 +28,6 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
@@ -55,9 +54,7 @@ class HomeFragment : Fragment() {
                 homeViewModel.searchCars(searchText)
                 return true
             }
-
             override fun onQueryTextChange(newText: String): Boolean {
-                // Aquí puedes realizar alguna acción si el texto de búsqueda cambia en tiempo real
                 return false
             }
         })

@@ -58,6 +58,6 @@ class Login : AppCompatActivity() {
         etUserName = findViewById(R.id.editTextTextEmailAddress)
         etPassword = findViewById(R.id.editTextTextPassword)
         btnLogin = findViewById(R.id.btnLogin)
-        btnLogin.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.btn_brand_black));
+        btnLogin.backgroundTintList = ContextCompat.getColorStateList(this, R.color.btn_brand_black);
     }
 }

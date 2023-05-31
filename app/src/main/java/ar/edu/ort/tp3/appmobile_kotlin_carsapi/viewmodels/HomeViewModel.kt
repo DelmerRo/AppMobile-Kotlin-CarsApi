@@ -12,15 +12,15 @@ import kotlinx.coroutines.withContext
 
 class HomeViewModel: ViewModel() {
     val carList: MutableLiveData<List<Car>> = MutableLiveData()
-
+    private var apiKey = "VyFRiZ7J1W4Vbzuk89yLRA==qWOIgbFZ7H6YB8lI"
     fun searchCars(searchText: String) {
        if(searchText != "0"){
         viewModelScope.launch {
             val service = CarServiceApiBuilder.getCarService()
 
-            val yearDeferred = async { service.getCarsForYear("VyFRiZ7J1W4Vbzuk89yLRA==qWOIgbFZ7H6YB8lI", searchText) }
-            val transmissionDeferred = async { service.getCarsForTransmission("VyFRiZ7J1W4Vbzuk89yLRA==qWOIgbFZ7H6YB8lI", searchText) }
-            val fuelTypeDeferred = async { service.getCarsForFuelType("VyFRiZ7J1W4Vbzuk89yLRA==qWOIgbFZ7H6YB8lI", searchText) }
+            val yearDeferred = async { service.getCarsForYear(apiKey, searchText) }
+            val transmissionDeferred = async { service.getCarsForTransmission(apiKey, searchText) }
+            val fuelTypeDeferred = async { service.getCarsForFuelType(apiKey, searchText) }
 
             try {
                 val yearResponse = yearDeferred.await()
@@ -55,7 +55,7 @@ class HomeViewModel: ViewModel() {
            viewModelScope.launch {
                val service = CarServiceApiBuilder.getCarService()
 
-               val yearDeferred = async { service.getCarsForYear("VyFRiZ7J1W4Vbzuk89yLRA==qWOIgbFZ7H6YB8lI", "1996") }
+               val yearDeferred = async { service.getCarsForYear(apiKey, "1996") }
 
                try {
                    val yearResponse = yearDeferred.await()

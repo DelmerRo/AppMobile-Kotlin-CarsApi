@@ -18,7 +18,7 @@ class ProfileFragment : Fragment() {
     private lateinit var ivProfilePhoto: ImageView
     private lateinit var tvProfileUsername: TextView
     private lateinit var profileViewModel: ProfileViewModel
-    private var isProfileUpdated = false // Bandera para controlar la actualización
+    private var isProfileUpdated = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
