@@ -11,7 +11,6 @@ import ar.edu.ort.tp3.appmobile_kotlin_carsapi.activities.MyAccountActivity
 
 class SettingFragment : Fragment() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -26,5 +25,4 @@ class SettingFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_setting, container, false)
     }
-
 }
