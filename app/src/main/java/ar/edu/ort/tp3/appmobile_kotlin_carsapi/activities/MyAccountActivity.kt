@@ -29,7 +29,7 @@ class MyAccountActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_account)
-        //supportActionBar?.hide()
+      //  supportActionBar?.hide()
         initComponents()
         updateNameUser()
         initListeners()

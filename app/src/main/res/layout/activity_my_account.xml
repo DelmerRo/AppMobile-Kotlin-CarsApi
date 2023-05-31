@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/main_nav" />
+        app:navGraph="@navigation/main_nav"
+        android:background="@color/BackgroundFragment"/>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view_left"

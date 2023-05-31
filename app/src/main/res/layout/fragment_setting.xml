@@ -8,7 +8,6 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,11 +15,10 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="20dp"
         android:orientation="vertical"
-        android:background="@color/BackgroundFragment">
-
-
+        android:background="@color/background_setting">
 
         <LinearLayout
+            android:background="@color/background_setting"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -33,8 +31,6 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="#4890E1"
                 android:textStyle="bold"
-
-
                 android:text="Generales" />
         </LinearLayout>
 

@@ -2,30 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
 
-
+    </group>
+    <group android:checkableBehavior="single">
         <item
-            android:checkableBehavior="none"
-            android:id="@+id/subtitle"
-            android:title="_____________________________________">
-            <menu>
-                <item
-                    android:id="@+id/profile"
-                    android:icon="@drawable/basicmenuprofile"
-                    android:title="Perfil"
-                    />
-                <item
-                    android:id="@+id/setting1"
-                    android:icon="@drawable/basicmenusetting"
-                    android:title="Configuración"
-                    />
-                <item
-                    android:id="@+id/favoritos"
-                    android:icon="@drawable/basicmenufavorito"
-                    android:title="Favoritos"
-                    />
-            </menu>
-        </item>
-
+            android:id="@+id/profile"
+            android:icon="@drawable/basicmenuprofile"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/setting1"
+            android:icon="@drawable/basicmenusetting"
+            android:title="Configuración" />
+        <item
+            android:id="@+id/favoritos"
+            android:icon="@drawable/basicmenufavorito"
+            android:title="Favoritos" />
+    </group>
 
 </menu>
