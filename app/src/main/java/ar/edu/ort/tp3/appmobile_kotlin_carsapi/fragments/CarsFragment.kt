@@ -20,7 +20,7 @@ class CarsFragment : Fragment() {
     private lateinit var recyclerViewCars: RecyclerView
     private lateinit var etCarsSearch: EditText
     private lateinit var carsViewModel: CarsViewModel
-
+    private var marcaAMostrar = "Toyota"
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -48,7 +48,7 @@ class CarsFragment : Fragment() {
         carsViewModel.carList.observe(viewLifecycleOwner) { carList ->
             showData(carList)
         }
-        carsViewModel.searchCars("toyota")
+        carsViewModel.searchCars(marcaAMostrar)
     }
 
     private fun showData(carList: List<Car>) {

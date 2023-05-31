@@ -59,18 +59,11 @@ class MyAccountActivity : AppCompatActivity() {
     private fun setupDrawerLayout() {
 
         val navController = navHostFragment.navController
-        // Vinculo la navegación del drawer con la del graph
         navigationView.setupWithNavController(navController)
 
-        // Configuro la appbar para que muestre el icono del drawer y actualice el titulo
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
-
-        // Listener para cuando se realiza la navegacion
         navController.addOnDestinationChangedListener { _, _, _ ->
-
-            // Aca le digo que quiero que mi icono izquierdo de la appbar sea el del drawer
             supportActionBar?.setHomeAsUpIndicator(R.drawable.hamburger)
-
         }
     }
 

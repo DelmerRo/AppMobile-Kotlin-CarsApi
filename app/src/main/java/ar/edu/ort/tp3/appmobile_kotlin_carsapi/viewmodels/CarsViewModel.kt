@@ -9,13 +9,13 @@ import kotlinx.coroutines.launch
 
 class CarsViewModel : ViewModel() {
     val carList: MutableLiveData<List<Car>> = MutableLiveData()
-
+    private var apiKey = "VyFRiZ7J1W4Vbzuk89yLRA==qWOIgbFZ7H6YB8lI"
     fun searchCars(searchText: String) {
         viewModelScope.launch {
             val service = CarServiceApiBuilder.getCarService()
             val carList = mutableListOf<Car>()
             try {
-                val response = service.getCarsForMake("VyFRiZ7J1W4Vbzuk89yLRA==qWOIgbFZ7H6YB8lI", searchText)
+                val response = service.getCarsForMake(apiKey, searchText)
                 if (response.isSuccessful) {
                     val cars = response.body()
                     cars?.let {
