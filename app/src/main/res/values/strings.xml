@@ -13,5 +13,8 @@
     <string name="search">Buscar</string>
     <string name="profile">Perfil</string>
     <string name="contentDescription">Foto de perfil</string>
+    <string name="buscador_de_vehiculos">Buscador de Vehículos</string>
+    <string name="buscador_por_año">Buscador de marcas por año o combustible</string>
+    <string name="criterio_busqueda">Ingrese marca, modelo, año o tipo de combustible</string>
 
 </resources>

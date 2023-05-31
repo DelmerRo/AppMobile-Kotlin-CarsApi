@@ -16,7 +16,7 @@
         android:background="@drawable/edittext_rounded"
         android:drawableLeft="@drawable/search"
         android:gravity="center"
-        android:hint="Buscador de vehículos"
+        android:hint="@string/criterio_busqueda"
         android:paddingLeft="47dp" /> <!-- Ajusta el valor según tus necesidades -->
 
     <androidx.recyclerview.widget.RecyclerView
