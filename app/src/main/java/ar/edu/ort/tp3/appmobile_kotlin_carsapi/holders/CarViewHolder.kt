@@ -45,41 +45,22 @@ class CarViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 
     fun setImage(make: String) {
         val imageView = view?.findViewById<ImageView>(R.id.ivHolderRCCarMakeAndModelLogo)
-        if (make == "toyota") {
-            imageView?.setImageResource(R.drawable.logo_toyota)
-        }else if(make == "bmw"){
-            imageView?.setImageResource(R.drawable.logo_bmw)
-        }else if(make == "maserati"){
-            imageView?.setImageResource(R.drawable.logo_maserati)
-        } else if(make == "mercedes-benz"){
-            imageView?.setImageResource(R.drawable.logo_mercedes)
-        }else if(make == "porsche") {
-            imageView?.setImageResource(R.drawable.logo_porsch)
-        }else if(make == "alfa romeo"){
-                imageView?.setImageResource(R.drawable.logo_alfa_romeo)
-        }else if(make == "ferrari"){
-            imageView?.setImageResource(R.drawable.logo_ferrari)
-        }else if(make == "dodge"){
-            imageView?.setImageResource(R.drawable.logo_dodge)
-        }else if(make == "subaru"){
-            imageView?.setImageResource(R.drawable.logo_subaru)
-        }else if(make == "acura"){
-            imageView?.setImageResource(R.drawable.logo_acura)
-        }else if(make == "honda"){
-            imageView?.setImageResource(R.drawable.logo_honda)
-        }else if(make == "chevrolet"){
-            imageView?.setImageResource(R.drawable.logo_chevrolet)
-        }else if(make == "aston martin"){
-            imageView?.setImageResource(R.drawable.logo_aston_martin)
-        }
-        else if(make == "audi"){
-            imageView?.setImageResource(R.drawable.logo_audi)
-        }
-
-
-
-        else{
-            imageView?.setImageResource(R.drawable.car_logo_flot)
+        when (make) {
+            "toyota" -> imageView?.setImageResource(R.drawable.logo_toyota)
+            "bmw" -> imageView?.setImageResource(R.drawable.logo_bmw)
+            "maserati" -> imageView?.setImageResource(R.drawable.logo_maserati)
+            "mercedes-benz" -> imageView?.setImageResource(R.drawable.logo_mercedes)
+            "porsche" -> imageView?.setImageResource(R.drawable.logo_porsch)
+            "alfa romeo" -> imageView?.setImageResource(R.drawable.logo_alfa_romeo)
+            "ferrari" -> imageView?.setImageResource(R.drawable.logo_ferrari)
+            "dodge" -> imageView?.setImageResource(R.drawable.logo_dodge)
+            "subaru" -> imageView?.setImageResource(R.drawable.logo_subaru)
+            "acura" -> imageView?.setImageResource(R.drawable.logo_acura)
+            "honda" -> imageView?.setImageResource(R.drawable.logo_honda)
+            "chevrolet" -> imageView?.setImageResource(R.drawable.logo_chevrolet)
+            "aston martin" -> imageView?.setImageResource(R.drawable.logo_aston_martin)
+            "audi" -> imageView?.setImageResource(R.drawable.logo_audi)
+            else -> imageView?.setImageResource(R.drawable.car_logo_flot)
         }
 
     }

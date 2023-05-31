@@ -11,10 +11,6 @@
         android:label="Autos"
         tools:layout="@layout/fragment_cars" >
         <action
-            android:id="@+id/action_carsFragment_to_homeFragment"
-            app:destination="@id/home"
-            app:popUpToInclusive="false" />
-        <action
             android:id="@+id/action_cars_to_search3"
             app:destination="@id/search" />
     </fragment>
@@ -23,22 +19,13 @@
         android:id="@+id/home"
         android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_home_to_cars"
-            app:destination="@id/cars" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/profile"
         android:name="ar.edu.ort.tp3.appmobile_kotlin_carsapi.fragments.ProfileFragment"
         android:label="Perfil"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_profile_to_search"
-            app:destination="@id/search"
-            app:popUpToInclusive="false" />
-    </fragment>
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/search"
@@ -48,9 +35,6 @@
         <action
             android:id="@+id/action_search_to_cars"
             app:destination="@id/cars" />
-        <action
-            android:id="@+id/action_search_to_profile"
-            app:destination="@id/profile" />
     </fragment>
 
 </navigation>
